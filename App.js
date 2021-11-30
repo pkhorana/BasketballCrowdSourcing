@@ -15,6 +15,7 @@ import QuestionScreen from './components/QuestionScreen';
 import FinishSurvey from './components/FinishSurvey';
 import Tutorial from './components/Tutorial';
 import SurveysScreen from './components/SurveysScreen';
+import QuestionJ from './components/QuestionJ';
 
 
 import * as firebase from 'firebase';
@@ -23,8 +24,12 @@ import { LogBox } from 'react-native';
 
 LogBox.ignoreLogs(['Setting a timer']);
 
-
-firebase.initializeApp(firebaseConfig);
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+} else {
+  firebase.app(); // if already initialized, use that one
+}
+// firebase.initializeApp(firebaseConfig);
 
 const MainStack = createStackNavigator();
 const HomeStack =  createStackNavigator();
@@ -81,10 +86,13 @@ export default function App() {
   return (
     <NavigationContainer>
       <MainStack.Navigator>
+        <MainStack.Screen name="QuestionJ" component={QuestionJ} options={{headerShown: false}}/>
         <MainStack.Screen name="LoadingScreen" component={Loading} options={{title: ''}}/>
         <MainStack.Screen name="LoginScreen" component={Login}  options={{headerShown: false}} />
         <MainStack.Screen name="CreateAccountScreen" component={CreateAccount} options={{title: 'Create Account'}}/>
         <MainStack.Screen name="VerifyAccountScreen" component={VerifyAccount} options={{headerShown: false}}/>
+        
+
         <MainStack.Screen name="ForgotPasswordScreen" component={ForgotPassword} options={{title: 'Forgot Password'}}/>
         <MainStack.Screen name="CreateProfileScreen" component={CreateProfile} options={{title: 'Create Profile'}}/>
         <MainStack.Screen name="HomeScreen" component={DrawerNavigatorScreen} options={{headerShown: false}}/>

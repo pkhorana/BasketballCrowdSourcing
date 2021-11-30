@@ -176,11 +176,11 @@ export default function Login(props) {
   }
 
   function handleLogin() {
-      firebase
-      .auth()
-      .signInWithEmailAndPassword(userText, passText)
-      .then(() => successLogin())
-      .catch(error => alert('Invalid Credentials. Enter Again.'));
+      // firebase
+      // .auth()
+      // .signInWithEmailAndPassword(userText, passText)
+      // .then(() => successLogin())
+      // .catch(error => alert('Invalid Credentials. Enter Again.'));
   }
 
   return (
@@ -202,7 +202,7 @@ export default function Login(props) {
       </View>
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button}
-            onPress={() => handleLogin()}>
+            onPress={() => props.navigation.navigate('QuestionJ')}>
             <Text>SIGN IN</Text>
         </TouchableOpacity>
 

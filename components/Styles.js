@@ -6,6 +6,14 @@ export default StyleSheet.create({
         alignSelf: 'stretch',
         backgroundColor: '#3498db'
     },
+    imageContainer: {
+        flex: 1,
+        flexDirection:"row",
+        alignSelf: 'stretch',
+        backgroundColor: '#3498db',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
     loginContainer: {
       flex: 1,
       justifyContent: 'center',
@@ -53,6 +61,30 @@ export default StyleSheet.create({
         borderWidth: 3,
         borderColor: '#3498db',
         backgroundColor: '#56aed0',
+        flex: 1,
+        alignSelf: 'stretch'
+    },
+    button2: {
+        marginTop: 10,
+        alignItems: 'center',
+        backgroundColor: "#DDDDDD",
+        padding: 15,
+        height: 100,
+        borderWidth: 3,
+        borderColor: '#3498db',
+        backgroundColor: '#56aed0',
+        flex: 1,
+        alignSelf: 'stretch'
+    },
+    button3: {
+        marginTop: 0,
+        alignItems: 'center',
+        
+        padding: 15,
+       
+        
+        flex: 1,
+        alignSelf: 'stretch'
     },
     profileTitle: {
         color: '#FFFF',
