@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "passiton",
-    "slug": "passiton",
+    "name": "bballCrowdsourcing",
+    "slug": "bballCrowdsourcing",
     "userInterfaceStyle": "automatic",
     "platforms": [
       "ios",
@@ -13,7 +13,7 @@
     "icon": "./assets/icon.png",
     "facebookScheme": "fb356033035592472",
     "facebookAppId": "356033035592472",
-    "facebookDisplayName": "Pass-It-On",
+    "facebookDisplayName": "bballCrowdsourcing",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",

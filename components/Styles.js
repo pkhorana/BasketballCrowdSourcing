@@ -77,14 +77,34 @@ export default StyleSheet.create({
         alignSelf: 'stretch'
     },
     button3: {
-        marginTop: 0,
+        marginTop: 10,
         alignItems: 'center',
         
-        padding: 15,
+        
        
         
         flex: 1,
         alignSelf: 'stretch'
+    },
+    button4: {
+        alignItems: 'center',
+        position: 'relative',
+        bottom: 0,
+        
+        padding: 15,
+       
+        
+        // flex: 1,
+        alignSelf: 'stretch'
+    },
+    button5: {
+        
+        alignItems: 'center',
+        marginTop: 6,
+        flex: 1,
+        alignSelf: 'stretch',
+        marginBottom: 14
+        
     },
     profileTitle: {
         color: '#FFFF',
